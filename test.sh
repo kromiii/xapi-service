@@ -16,13 +16,13 @@ log "Installing dependencies for the ADL conformance test suite."
 yarn install --ignore-engines --frozen-lockfile
 
 log "Running the ADL conformance test suite."
-node bin/console_runner.js -e "http://localhost:$EXPRESS_PORT/data/xAPI" -a -u "AAA" -p "BBB" -b
+node bin/console_runner.js -e "http://localhost:$EXPRESS_PORT/data/xAPI" -x "1.0.3" -a -u "AAA" -p "BBB" -b
 exitCode=$?
 
 log "Stopping the server."
 ps aux | grep [n]ode\ dist\/conformanceServer | awk '{print $2}' | xargs kill
 
-cat /root/conformance/logs/*
+cat ./logs/*
 
 log "Completed conformance tests."
 exit $exitCode

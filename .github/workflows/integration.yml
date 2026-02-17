@@ -82,8 +82,14 @@ jobs:
       - name: Performance Tests
         run: sh test.sh
 
+      - name: Prepare Coverage Report
+        run: nyc report --reporter=text-lcov > coverage.lcov
+
       - name: Codecov
-        run: yarn codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.lcov
+          fail_ci_if_error: true
 
   test-s3:
     name: Test S3
@@ -142,8 +148,14 @@ jobs:
       - name: Performance Tests
         run: sh test.sh
 
+      - name: Prepare Coverage Report
+        run: nyc report --reporter=text-lcov > coverage.lcov
+
       - name: Codecov
-        run: yarn codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.lcov
+          fail_ci_if_error: true
 
   test-azure:
     name: Test Azure
@@ -198,8 +210,14 @@ jobs:
       - name: Performance Tests
         run: sh test.sh
 
+      - name: Prepare Coverage Report
+        run: nyc report --reporter=text-lcov > coverage.lcov
+
       - name: Codecov
-        run: yarn codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.lcov
+          fail_ci_if_error: true
 
   test-google:
     name: Test Google
@@ -256,8 +274,14 @@ jobs:
       - name: Performance Tests
         run: sh test.sh
 
+      - name: Prepare Coverage Report
+        run: nyc report --reporter=text-lcov > coverage.lcov
+
       - name: Codecov
-        run: yarn codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.lcov
+          fail_ci_if_error: true
 
   release:
     name: Release

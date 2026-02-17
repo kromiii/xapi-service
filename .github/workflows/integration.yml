@@ -83,7 +83,7 @@ jobs:
         run: sh test.sh
 
       - name: Prepare Coverage Report
-        run: nyc report --reporter=text-lcov > coverage.lcov
+        run: yarn nyc report --reporter=text-lcov > coverage.lcov
 
       - name: Codecov
         uses: codecov/codecov-action@v4
@@ -149,7 +149,7 @@ jobs:
         run: sh test.sh
 
       - name: Prepare Coverage Report
-        run: nyc report --reporter=text-lcov > coverage.lcov
+        run: yarn nyc report --reporter=text-lcov > coverage.lcov
 
       - name: Codecov
         uses: codecov/codecov-action@v4
@@ -211,7 +211,7 @@ jobs:
         run: sh test.sh
 
       - name: Prepare Coverage Report
-        run: nyc report --reporter=text-lcov > coverage.lcov
+        run: yarn nyc report --reporter=text-lcov > coverage.lcov
 
       - name: Codecov
         uses: codecov/codecov-action@v4
@@ -275,7 +275,7 @@ jobs:
         run: sh test.sh
 
       - name: Prepare Coverage Report
-        run: nyc report --reporter=text-lcov > coverage.lcov
+        run: yarn nyc report --reporter=text-lcov > coverage.lcov
 
       - name: Codecov
         uses: codecov/codecov-action@v4

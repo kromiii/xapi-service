@@ -89,6 +89,7 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           files: ./coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
 
   test-s3:
@@ -155,6 +156,7 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           files: ./coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
 
   test-azure:
@@ -217,6 +219,7 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           files: ./coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
 
   test-google:
@@ -281,6 +284,7 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           files: ./coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
 
   release:
